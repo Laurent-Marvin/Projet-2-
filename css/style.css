@@ -144,7 +144,6 @@ nav a {
 .search-form {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
     padding: 40px 0;
 }
 
@@ -291,7 +290,6 @@ nav a {
 }
 
 /****** Hebergements ***********/
-/****** Hebergements ***********/
 .hebergements {
     width: 100%; /* Occupy full width */
     background-color: var(--main-bg-color);
@@ -307,7 +305,7 @@ nav a {
 
 .hebergements-card img {
     width: 100%;
-    height: 200px;
+    height: 120px;
     object-fit: cover;
     border-radius:10px  10px 0 0 ;
 }
@@ -338,7 +336,7 @@ nav a {
 
 .populaires-cards img {
     width: 33%;
-    height: 160px;
+    height: 120px;
     border-radius: 10px 0 0 10px ;
 }
 
@@ -575,36 +573,11 @@ footer {
         transform: scaleX(1);
     }
 
-    .search-form {
-        display: flex; /* Ensure flexbox is used */
-        flex-direction: row; /* Arrange items in a row */
-        align-items: center;
-        gap: 10px;
-        width: 100%;
+    .search-form{
+        display: flex;
+        justify-content: center;
     }
-
-    .search-form .search-icon,
-    .search-form input,
-    .search-form button {
-        border-radius: 0; /* Reset border radius for a consistent look */
-        flex: 1; /* Allow each item to take equal space */
-    }
-
-    .search-form .search-icon {
-        padding: 10px;
-        border-radius: 20px 0 0 20px; /* Rounded corners for left side */
-    }
-
-    .search-form input {
-        padding: 12px;
-        flex: 4; /* Give the input more space */
-    }
-
-    .search-form button {
-        padding: 12px;
-        border-radius: 0 20px 20px 0; /* Rounded corners for right side */
-        flex: 1; /* Keep the button smaller */
-    }
+    
 
     .filters {
         display: grid;
@@ -637,6 +610,11 @@ footer {
         flex-direction: column;
         gap: 20px; /* Espace entre les sections */
         background: none;
+        
+    }
+    .hebergements-card {
+        display: flex;
+        flex-direction: column;
     }
 
     .hebergements {
@@ -644,11 +622,20 @@ footer {
         order: 2;
        --main-bg-color: none;
     }
+    
+
+    .main-container{
+        padding: 0;
+        
+    }
 
     .populaires {
         flex-direction: column;
         width: 100% ;
-       
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        border-radius: 0;
+        
     }
 
     .populaires-cards {
@@ -668,21 +655,16 @@ footer {
         width: 100% ;
         height: 160px; /* Same height as the hebergements images */
         object-fit: cover;
-        border-radius: 10px; /* Same border radius as the hebergements images */
+        border-radius: 10px 10px 0 0; /* Same border radius as the hebergements images */
     }
 
     footer {
         flex-direction: column;
-        align-items: center;
+        align-items: left;
         gap: 20px;
+        width: calc(100% + 40px);
+        border-radius: 0;
     }
 
-    footer .footer-section {
-        width: 100%;
-        align-items: center;
-    }
-
-    footer .footer-section ul {
-        text-align: s
-    }
 }
+   
