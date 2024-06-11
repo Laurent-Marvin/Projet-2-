@@ -161,7 +161,7 @@ nav a {
 .search-form .search-icon {
     background-color: #F2F2F2;
     padding: 12px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 15px 0 0 15px;
     border: none;
     border-right: none;
     width: 50px;
@@ -178,7 +178,7 @@ nav a {
     border-right: none;
     border-color: #F2F2F2;
     color: black;
-    width: 200px;
+    width: 13% ;
     font-size: 16px;
     font-weight: bold;
 }
@@ -188,7 +188,7 @@ nav a {
     background-color: var(--main-color);
     color: white;
     border: none;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 15px 15px 0;
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 16px;
@@ -196,6 +196,10 @@ nav a {
 
 .search-form button:hover {
     background-color: #004bb5;
+}
+
+.search-form .button-icon {
+    display: none;
 }
 
 /****** Filters ***********/
@@ -511,7 +515,7 @@ footer {
     }
 
     .search-form button {
-        border-radius: 0 20px 20px 0; /* Rounded corners for right side */
+        border-radius: 0 15px 15px 0; /* Rounded corners for right side */
         background-color: var(--main-color);
         color: white;
         border: none;
@@ -573,9 +577,23 @@ footer {
         transform: scaleX(1);
     }
 
-    .search-form{
-        display: flex;
+    .search-form .input{
+width: 80%;
+    }
+
+    .search-form button {
         justify-content: center;
+        border-radius:15px; /* Rounded corners for right side */
+
+    }
+
+    .search-form .button-text {
+        display: none; /* Hide the text on small screens */
+    }
+
+    .search-form .button-icon {
+        display: inline-block; /* Ensure the icon is visible */
+        font-size: 16px; /* Adjust the size of the icon */
     }
     
 
