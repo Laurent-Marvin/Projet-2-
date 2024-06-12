@@ -35,7 +35,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 0 35px;
     box-sizing: border-box;
 }
 
@@ -97,7 +97,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 80px;
     padding: 0;
     margin: 0;
     position: relative;
@@ -254,6 +254,7 @@ nav a {
     align-items: center;
     font-size: 16px;
     color: #333;
+    margin-bottom: 2%;
 }
 
 .info-icon {
@@ -274,10 +275,6 @@ nav a {
     font-size: 12px;
 }
 
-.info-message p {
-    margin: 0;
-}
-
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -288,7 +285,6 @@ nav a {
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
-    border-radius: 20px;
     padding: 20px; /* Réduire le padding */
     box-sizing: border-box;
 }
@@ -467,19 +463,17 @@ footer {
         margin-top: 50px;
     }
 
-    .populaires-cards {
-        display: flex;
-        justify-content: space-between;
+     .populaires-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the columns to fit equally */
         gap: 15px;
     }
 
     .populaires-cards .card {
-        width: 200px;
         height: 130px;
         opacity: 1; /* Rendre la carte visible */
         overflow: hidden;
         background-color: white; /* Assurer une couleur de fond */
-        
     }
     
     .populaires-cards .card-title {
@@ -491,8 +485,7 @@ footer {
     }
 
     .populaires-cards img {
-        width: 40%; /* Ajuster la largeur de l'image pour occuper la moitié de la carte */
-        height: 100%;
+        width: 30%; /* Ajuster la largeur de l'image pour occuper la moitié de la carte */
         border-radius: 20px 0 0 20px;
         object-fit: cover
     }
@@ -542,7 +535,6 @@ footer {
     nav ul {
         display: flex;
         flex-direction: row; /* Display links in a row */
-        justify-content: space-between; /* Space out links */
         width: 100%; /* Full width */
         padding: 0;
         margin: 0;
@@ -563,7 +555,7 @@ footer {
         content: '';
         position: absolute;
         top: 100%; /* Position the bar below the text */
-        left: 0;
+        left: 0; /* Start the bar at the beginning */
         width: 100%; /* Full width */
         height: 3px;
         background-color: transparent;
@@ -578,7 +570,7 @@ footer {
     }
 
     .search-form .input{
-width: 80%;
+        width: 80%;
     }
 
     .search-form button {
@@ -596,6 +588,9 @@ width: 80%;
         font-size: 16px; /* Adjust the size of the icon */
     }
     
+    .info-icon{
+        width: 10%;
+}
 
     .filters {
         display: grid;
